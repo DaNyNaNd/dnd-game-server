@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+It uses [React Router](https://reacttraining.com/react-router/web/guides/quick-start) for navigation.
+
+It uses [Redux](https://redux.js.org/introduction/getting-started) for state management.
+
 ## Available Scripts
 
 In the project directory, you can run:
