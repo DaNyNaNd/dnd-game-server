@@ -1,5 +1,15 @@
 import * as React from "react";
 
-const ViewMap = () => <h1>ViewMap</h1>;
+interface ViewMapProps {
+  src: string;
+}
+
+const ViewMap = (props: ViewMapProps) => {
+  return (
+    <div>
+      <img src={props.src} alt="map" />
+    </div>
+  );
+};
 
 export default ViewMap;
