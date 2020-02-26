@@ -9,7 +9,7 @@ const FileUploader = () => {
   return (
     <form>
       <input type="file" />
-      <button type="submit" name="Submit" onPress={handleSubmit} />
+      <button type="submit" name="Submit" onSubmit={handleSubmit} />
     </form>
   );
 };
