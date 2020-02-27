@@ -5,7 +5,11 @@ const Home = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={ruins} alt="Ruins of Thundertree" />
+        <div className="row">
+          <div className="col-md-6">
+            <img src={ruins} className="img-fluid" alt="Ruins of Thundertree" />
+          </div>
+        </div>
       </header>
     </div>
   );

@@ -1,12 +1,16 @@
 import React from "react";
-import { BrowserRouter as Route, Router, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Home from "../scenes/Home";
 
 const history = createBrowserHistory();
 
 const Routes = () => (
-  <Router history={history}>
+  <Router >
     <Switch>
       <Route path="/">
         <Home />
