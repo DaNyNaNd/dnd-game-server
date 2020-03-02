@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import PlayerSelect from "./scenes/PlayerSelect";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import 'bootstrap/dist/css/bootstrap.min.css';
