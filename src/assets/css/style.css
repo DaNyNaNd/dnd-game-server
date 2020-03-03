@@ -186,7 +186,33 @@ a.article, a.article:hover {
     margin: 5px auto;
 }
 
+.player-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    
+}
 
+.player-card {
+    background-image: url('https://media.dnd.wizards.com/ToD_1280x960_Wallpaper.jpg');
+        background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.player-card h4{
+    color: #FFF;
+    position: relative;
+}
+.player-card p{
+    color: #FFF;
+    position: relative;
+}
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
