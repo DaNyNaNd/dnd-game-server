@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -7,13 +7,14 @@ import Sidebar from "../components/Sidebar";
 import ruins from "../assets/images/Ruins_of_Thundertree-map.jpg";
 
 const Home = () => {
+  const [selectedMap, setSelectedMap] = useState({ id: 0, name: "", src: "" });
   return (
     <>
       <Header />
       <Container fluid>
         <Row>
           <Col>
-            <Sidebar />
+            <Sidebar selectMap={setSelectedMap} />
           </Col>
           <Col lg={9}>
             <div className="App">
@@ -21,9 +22,9 @@ const Home = () => {
                 <div className="row">
                   <div className="col-md-8">
                     <img
-                      src={ruins}
+                      src={selectedMap.src}
                       className="img-fluid"
-                      alt="Ruins of Thundertree"
+                      alt={selectedMap.name}
                     />
                   </div>
                 </div>

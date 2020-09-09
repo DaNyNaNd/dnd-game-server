@@ -1,21 +1,21 @@
 import React from "react";
 import { Button, Navbar } from "react-bootstrap";
+import MapList from './MapList';
+import { maps } from '../mockData/maps.js';
 
-function Sidebar() {
-  var CampaignName = "Lost Mine of Phandelver";
+const Sidebar = (props: any) => {
+  
   return (
     <nav id="sidebar">
       <div className="sidebar-header">
         <h1>D&D Stuff</h1>
       </div>
       <div className="pt-3 mx-3">
-        <h3>Campaign:</h3>
-        <p>
-          {CampaignName}{" "}
+        <h3>Maps:</h3>
+        <MapList mapList={maps} selectMap={props.selectMap}/>
           <a href="#" className="text-muted">
             <small>(change)</small>
           </a>
-        </p>
       </div>
       <ul className="list-unstyled components">
         <li className="active">
