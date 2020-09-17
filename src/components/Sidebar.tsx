@@ -1,10 +1,8 @@
 import React from "react";
-import { Button, Navbar } from "react-bootstrap";
-import MapList from './MapList';
-import { maps } from '../mockData/maps.js';
+import MapList from "./MapList";
+import { maps } from "../mockData/maps.js";
 
 const Sidebar = (props: any) => {
-  
   return (
     <nav id="sidebar">
       <div className="sidebar-header">
@@ -12,10 +10,10 @@ const Sidebar = (props: any) => {
       </div>
       <div className="pt-3 mx-3">
         <h3>Maps:</h3>
-        <MapList mapList={maps} selectMap={props.selectMap}/>
-          <a href="#" className="text-muted">
-            <small>(change)</small>
-          </a>
+        <MapList mapList={maps} selectMap={props.selectMap} />
+        <p onClick={props.handleShowModal} className="text-muted">
+          Add New Map
+        </p>
       </div>
       <ul className="list-unstyled components">
         <li className="active">
@@ -40,6 +38,6 @@ const Sidebar = (props: any) => {
       </ul>
     </nav>
   );
-}
+};
 
 export default Sidebar;

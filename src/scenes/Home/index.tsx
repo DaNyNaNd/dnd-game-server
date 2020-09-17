@@ -1,20 +1,28 @@
 import React, { useState } from "react";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
-import ruins from "../assets/images/Ruins_of_Thundertree-map.jpg";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Header from "../../components/Header";
+import MapModal from "./MapModal";
+import Sidebar from "../../components/Sidebar";
 
 const Home = () => {
   const [selectedMap, setSelectedMap] = useState({ id: 0, name: "", src: "" });
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+
   return (
     <>
       <Header />
       <Container fluid>
         <Row>
           <Col>
-            <Sidebar selectMap={setSelectedMap} />
+            <Sidebar
+              selectMap={setSelectedMap}
+              handleShowModal={handleShowModal}
+            />
           </Col>
           <Col lg={9}>
             <div className="App">
@@ -33,6 +41,7 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
+      <MapModal showModal={showModal} handleCloseModal={handleCloseModal} />
     </>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
-import ruins from "../assets/images/Ruins_of_Thundertree-map.jpg";
-import PlayerCard from "../components/PlayerCard";
+import PlayerCard from "../../components/PlayerCard";
 
 interface Player {
   name: string;
