@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import Home from "../scenes/Home";
-import PlayerSelect from "../scenes/PlayerSelect";
+import Home from "../pages/Home";
+import PlayerSelect from "../pages/PlayerSelect";
 
 const history = createBrowserHistory();
 

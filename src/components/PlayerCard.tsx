@@ -1,5 +1,5 @@
 import React from "react";
-import { getPlayerInfo } from "../utility/helpers.js";
+import { getPlayerInfo } from "../utils/helpers.js";
 
 interface Props {
   level: number;
@@ -8,7 +8,7 @@ interface Props {
   race: string;
 }
 
-const PlayerCard = (props: Props) => {
+export const PlayerCard = (props: Props) => {
   getPlayerInfo();
 
   return (
@@ -22,5 +22,3 @@ const PlayerCard = (props: Props) => {
     </div>
   );
 };
-
-export default PlayerCard;

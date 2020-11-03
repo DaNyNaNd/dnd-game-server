@@ -1,12 +1,12 @@
 import React from "react";
-import MapList from "./MapList";
+import { MapList } from "./MapList";
 import { maps } from "../mockData/maps.js";
 
 const Sidebar = (props: any) => {
   return (
     <nav id="sidebar">
       <div className="sidebar-header">
-        <h1>D&D Stuff</h1>
+        <h1>Campaign</h1>
       </div>
       <div className="pt-3 mx-3">
         <h3>Maps:</h3>
@@ -20,7 +20,7 @@ const Sidebar = (props: any) => {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/player">Players</a>
+          <a href="http://teamtaban.us/campaign.php">Players</a>
         </li>
       </ul>
 
