@@ -4,7 +4,10 @@ import { maps } from "../mockData/maps.js";
 
 const Sidebar = (props: any) => {
   return (
-    <nav id="sidebar">
+    <div
+      style={{ display: "flex", flexDirection: "column", flex: 1 }}
+      id="sidebar"
+    >
       <div className="sidebar-header">
         <h1>Campaign</h1>
       </div>
@@ -36,7 +39,7 @@ const Sidebar = (props: any) => {
           </a>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 };
 

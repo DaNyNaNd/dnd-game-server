@@ -1,25 +1,23 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import FormGroup from "@material-ui/core/FormGroup";
+import FormControl from "@material-ui/core/FormControl";
+import Input from "@material-ui/core/Input";
+import InputLabel from "@material-ui/core/InputLabel";
 
 const MapForm = (props: any) => {
   return (
-    <Form>
-      <FormGroup controlId="mapName">
-        <Form.Label>Map Name</Form.Label>
-        <Form.Control type="text" placeholder="Name" />
-      </FormGroup>
-      <FormGroup controlId="mapUrl">
-        <Form.Label>Map URL</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="https://www.host.com/path-to-image.jpg"
-        />
-      </FormGroup>
-      <Button variant="primary" type="submit">
+    <FormControl>
+      <InputLabel htmlFor="map-name">Map Name</InputLabel>
+      <Input id="map-name" placeholder="Baldur's Gate" />
+      <InputLabel htmlFor="map-url">Map URL</InputLabel>
+      <Input
+        id="map-url"
+        placeholder="https://www.host.com/path-to-image.jpg"
+      />
+      <Button color="primary" type="submit">
         Submit
       </Button>
-    </Form>
+    </FormControl>
   );
 };
 

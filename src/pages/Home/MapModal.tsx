@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "@material-ui/core/Modal";
+import Popover from "@material-ui/core/Popover";
 import MapForm from "./MapForm";
 
 interface MapModalProps {
@@ -10,14 +10,10 @@ interface MapModalProps {
 const MapModal = (props: MapModalProps) => {
   const { handleCloseModal, showModal } = props;
   return (
-    <Modal show={showModal} onHide={handleCloseModal}>
-      <Modal.Header closeButton>
-        <Modal.Title>Add New Map</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <MapForm />
-      </Modal.Body>
-    </Modal>
+    <Popover open={showModal} onClose={handleCloseModal}>
+      Add New Map
+      <MapForm />
+    </Popover>
   );
 };
 
