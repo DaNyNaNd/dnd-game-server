@@ -6,18 +6,22 @@ import InputLabel from "@material-ui/core/InputLabel";
 
 const MapForm = (props: any) => {
   return (
-    <FormControl>
-      <InputLabel htmlFor="map-name">Map Name</InputLabel>
-      <Input id="map-name" placeholder="Baldur's Gate" />
-      <InputLabel htmlFor="map-url">Map URL</InputLabel>
-      <Input
-        id="map-url"
-        placeholder="https://www.host.com/path-to-image.jpg"
-      />
-      <Button color="primary" type="submit">
-        Submit
-      </Button>
-    </FormControl>
+    <div>
+      <FormControl style={{ display: "block" }}>
+        <InputLabel htmlFor="map-name">Map Name</InputLabel>
+        <Input id="map-name" placeholder="Baldur's Gate" />
+      </FormControl>
+      <FormControl style={{ display: "block" }}>
+        <InputLabel htmlFor="map-url">Map URL</InputLabel>
+        <Input
+          id="map-url"
+          placeholder="https://www.host.com/path-to-image.jpg"
+        />
+        <Button color="primary" type="submit" style={{ display: "block" }}>
+          Submit
+        </Button>
+      </FormControl>
+    </div>
   );
 };
 

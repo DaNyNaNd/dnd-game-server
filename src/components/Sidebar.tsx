@@ -2,14 +2,31 @@ import React from "react";
 import { MapList } from "./MapList";
 import { maps } from "../mockData/maps.js";
 
-const Sidebar = (props: any) => {
+interface Map {
+  id: number;
+  name: string;
+  src: string;
+}
+
+interface Props {
+  selectMap: React.Dispatch<React.SetStateAction<Map | undefined>>;
+  selectedMap: Map | undefined;
+  handleShowModal: () => void;
+}
+
+const Sidebar = (props: Props) => {
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", flex: 1 }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        flex: 1,
+        margin: "10px",
+      }}
       id="sidebar"
     >
       <div className="sidebar-header">
-        <h1>Campaign</h1>
+        <h1>Lost Mine of Phandelver</h1>
       </div>
       <div className="pt-3 mx-3">
         <h3>Maps:</h3>
@@ -26,19 +43,12 @@ const Sidebar = (props: any) => {
           <a href="http://teamtaban.us/campaign.php">Players</a>
         </li>
       </ul>
-
-      <ul className="list-unstyled CTAs">
-        <li>
-          <a href="#" className="download">
-            Block 1
-          </a>
-        </li>
-        <li>
-          <a href="#" className="article">
-            Block 2
-          </a>
-        </li>
-      </ul>
+      {props.selectedMap && (
+        <div>
+          <hr />
+          <div>This is where the map properties go</div>
+        </div>
+      )}
     </div>
   );
 };

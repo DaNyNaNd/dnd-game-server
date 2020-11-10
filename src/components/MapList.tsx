@@ -13,21 +13,29 @@ interface MapListProps {
 
 export const MapList = (props: MapListProps) => {
   const { mapList, selectMap } = props;
+  const [highlight, setHighlight] = React.useState<number | undefined>();
 
-  const setSelectedMap = (mapSrc: Object) => {
-    console.log("mapSrc", mapSrc);
+  const setSelectedMap = (mapSrc: MapElement) => {
     selectMap(mapSrc);
+    setHighlight(mapSrc.id);
   };
   return (
     <div>
-      {mapList.map((singleMap) => (
-        <span
-          style={{ display: "block", fontSize: "16px" }}
-          onClick={() => setSelectedMap(singleMap)}
-        >
-          {singleMap.name}
-        </span>
-      ))}
+      {mapList.map((singleMap) => {
+        const fontWeight = singleMap.id === highlight ? "bold" : "normal";
+        return (
+          <span
+            style={{
+              display: "block",
+              fontSize: "16px",
+              fontWeight: fontWeight,
+            }}
+            onClick={() => setSelectedMap(singleMap)}
+          >
+            {singleMap.name}
+          </span>
+        );
+      })}
     </div>
   );
 };
